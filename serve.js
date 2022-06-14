@@ -1,5 +1,6 @@
 // importando o nosso express
 const express = require('express')
+const assert = require('assert');
 //const ObjectId = require("mongodb").ObjectId;
 const app = express()
 const port = 3001
@@ -13,23 +14,23 @@ app.use(express.urlencoded({extended:true}))
 
 // conectando o banco de dados
 
-const {MongoClient} =require('mongodb')
+const MongoClient = require('mongodb').MongoClient;
 
-(async function(){
-const uri = `${process.env.DATABASE_URL}`
 
-try {
-    // Use connect method to connect to the Server
-    const client = await new MongoClient.connect(uri);
+// Connection URL
+const uri = `${process.env.DATABASE_URL}`;
+// Database Name
+const db = 'bancoPlus';
+// Use connect method to connect to the Server passing in
+// additional options
+MongoClient.connect(uri, {
+  poolSize: 10, ssl: true
+}, function(err, client) {
+  assert.equal(null, err);
+  console.log("Connected correctly to server");
 
-    const db = client.db('bancoPlus');
-  } catch (err) {
-    console.log(err.stack);
-  }
-
-  if (client) {
-    client.close();
-  }
+  client.close();
+});
 })();
     //app.listen(8080 , () =>{
      //console.log("rodando safe")
