@@ -31,7 +31,6 @@ MongoClient.connect(uri, {
 
   client.close();
 });
-})();
     //app.listen(8080 , () =>{
      //console.log("rodando safe")
     //})
