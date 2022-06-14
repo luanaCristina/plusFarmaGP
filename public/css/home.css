@@ -1,0 +1,275 @@
+
+/* TELA HOME*/
+#carouselExampleControls{
+    width: 350px;
+    height: 350px;
+    top: 90%;
+    border: solid;
+    border-radius: 5px;
+}
+.container {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.card {
+    border: solid;
+    box-shadow: 8px 3px 3px rgb(114, 112, 112);;
+}
+.text-prin{
+    margin-left: 40px;
+}
+#body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-link{
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+}
+.linkum{
+    text-decoration: none
+}
+
+/* TELA LOGIN*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.img-box {
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, darkblue, skyblue);
+    padding: 20px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-box .form-box {
+    width: 50%;
+}
+
+.content-box .form-box .ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box .form-box .ul li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content-box .form-box .ul li:hover {
+    background: #e4e4e4;
+}
+
+.form-box .ul li img {
+    width: 40px;
+}
+
+.content-box .form-box h2 {
+    color: #32324f;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.content-box .form-box .input-box {
+    margin-bottom: 20px;
+}
+
+.content-box .form-box .input-box input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: #32324f;
+    background-color: #ecf2f7;
+    border-radius: 5px;
+}
+
+.content-box .form-box .input-box span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #32324f;
+    font-weight: 400;
+}
+
+.content-box .form-box .input-box input::placeholder {
+    color: #a9adb6;
+}
+
+.content-box .form-box .input-box input[type=button] {
+    background: #4aa4ee;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.content-box .form-box .input-box input[type=submit]:hover {
+    background: #3286ca;
+}
+
+.content-box .form-box .remember{
+    margin-bottom: 20px;
+    color: #32324f;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-box .form-box .remember a{
+    text-decoration: none;
+    color: #4aa4ee;
+}
+.content-box .form-box .remember a:hover{
+    color: #3286ca;
+}
+
+.content-box .form-box .input-box p {
+    color: #32324f;
+}
+.content-box .form-box .input-box p a{
+    color: #4aa4ee;
+}
+
+.content-box .form-box .input-box p a:hover{
+    color: #3286ca;
+}
+.content-box .form-box h3
+{
+    color: #607d8b;
+    text-decoration: none;
+    margin: 40px 0 15px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 22px;
+}
+#buttoentrar{
+    background-color: #4aa4ee;
+}
+
+/* GLOBAL.CSS*/
+
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+input,
+button {
+   padding: 10px;
+   width: -webkit-fill-available;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.loading label {
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
+}
+button:active {
+    opacity: 0.8;
+}
+button[disabled] {
+    opacity: 0.8;
+}
+
+.clear {
+    background: #4aa4ee;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.solid {
+    margin-top: 30px;
+    background: #4aa4ee;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.outline {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+}
+
+.error {
+    background: red;
+    color: white;
+    display: none;
+} 

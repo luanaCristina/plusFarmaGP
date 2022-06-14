@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>+Farma</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="centralize">
+    <div class="container-login">
+        <div class="img-box">
+            <img src="img/farma.png">
+            </div>
+            <div class="content-box">
+                <div class="form-box">
+                    <h2>Login</h2>
+                        <form style="margin-left: 100px;">
+                        <div class="input-box">
+                            <div><label>Email</label></div>
+                            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+                        </div>
+                        <div class="input-box">
+                            <div><label>Senha</label></div>
+                            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+                        </div>
+                        <div>
+                            <p>Não possui cadastro? <a href="/register">Inscrever-se</a></p>
+                        </div>
+                        <div>
+                             <p>Continar sem cadastro? <a href="/home"> clique aqui</a></p>
+                        </div>
+                        <div>
+                            <button type="button" class="solid" id="login-button" onclick="login()">Entrar</button>
+                        </div>
+                        <div>
+                            <a href="/RecSenha"><button type="button" class="clear">Recuperar senha</button></a>
+                        </div>
+                        
+                        
+                    </form>
+                    <h3>Logar Com</h3>
+                        <ul class="ul">
+                        <li><img src="img/face.png"></li>
+                        <li><img src="img/google.png"></li>
+                    
+                        </ul>
+            </div>
+        </div>    
+    </div>        
+</body>
+
+<link rel="stylesheet" href="../public/css/login.css">
+
+<script src="js/login.js"></script>
+<script src="js/validations.js"></script>
+<script src="js/loading.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyAonVCyUhVNX1Chvv2n8syWMEAR5D5GFlM",
+  authDomain: "plusfarma-75f42.firebaseapp.com",
+  projectId: "plusfarma-75f42",
+  storageBucket: "plusfarma-75f42.appspot.com",
+  messagingSenderId: "488094859470",
+  appId: "1:488094859470:web:43cca896c5219f11a7509f",
+  measurementId: "G-J38RG16PV7"
+};
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+</html>

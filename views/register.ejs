@@ -1,0 +1,79 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>+Farma-REGISTRO</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="centralize">
+    <div class="container-login">
+        <div class="img-box">
+            <img src="img/farma.png">
+        </div>
+        <div class="content-box">
+            <div class="form-box">
+                <h2>Registar</h2>
+                <form style="margin-left: 100px;" action="/register" method="POST">
+                    <div  class="input-box">
+                        <div><label>Nome e sobrenome</label></div>
+                        <input name="name" type="text" placeholder="Nome"
+                            onchange="onChangeName()" id="name"/>
+                        <input name="surname" style="margin-top: 20px;" type="text" placeholder="sobrenome"
+                            onchange="onChangeSurname()" id="surname"/>
+                        <div class="error" id="email-required-error">
+                            O nome e sobrenome são obrigatórios
+                        </div>
+                        
+                    </div>
+        <div class="input-box">
+            <div><label>Email</label></div>
+            <input type="email" name="email" placeholder="seu@email.com"
+                onchange="onChangeEmail()" id="email"/>
+            <div class="error" id="email-required-error">
+                O Email é obrigatório
+            </div>
+            <div class="error" id="email-invalid-error">
+                Email inválido
+            </div>
+        </div>
+        <div class="input-box">
+            <div><label>Senha</label></div>
+            <input name="password" type="password" placeholder="Senha"
+                id="password" onchange="onChangePassword()"/>
+            <div class="error" id="password-required-error">
+                Senha obrigatória
+            <div class="error" id="password-min-length-error">
+                A Senha deve ter pelo menos 6 caracteres
+            </div>
+        </div>
+        <div class="form-field">
+            <div><label>Confirmar senha</label></div>
+            <input name="confirmPassword" type="password" placeholder="Confirmar senha"
+                id="confirmPassword" onchange="onChangeConfirmPassword()"/>
+            <div class="error" id="password-doesnt-match-error">
+                Senha e confirmar senha devem ser iguais
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="solid" id="register-button">
+                Registrar
+            </button>
+        </div>
+        <div>
+            <a href="/login"><button type="button" class="clear">Login</button></a>
+        </div>
+    </form>
+            </div>
+        </div>
+    
+</body>
+
+
+<link rel="stylesheet" href="css/register.css">
+
+<script src="js/register.js"></script>
+<script src="js/validations.js"></script>
+
+</html>
