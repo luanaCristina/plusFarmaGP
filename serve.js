@@ -2,6 +2,11 @@
 const express = require('express')
 //const { ObjectId } = require("mongodb");
 const app = express()
+const port = 3001
+
+app.listen(process.env.PORT || port, () => {
+  console.log(`app está rodando na porta ${port}`)
+})
 
 app.use(express.urlencoded({extended:true}))
 
@@ -16,10 +21,10 @@ MongoClient.connect(uri,(err, client) =>{
     db = client.db('bancoPlus')
   
 });
-    app.listen(8080 , () =>{
-     console.log("rodando safe")
-    })
-})
+    //app.listen(8080 , () =>{
+     //console.log("rodando safe")
+    //})
+//})
 
 
 // static file
