@@ -3,7 +3,6 @@ const express = require('express')
 const ObjectId = require("mongodb").ObjectId;
 const app = express()
 const port = 3001
-var timeout = require('connect-timeout')
 
 app.listen(process.env.PORT || port, () => {
   console.log(`app está rodando na porta ${port}`)
@@ -29,7 +28,6 @@ MongoClient.connect(uri,(err, client) =>{
 
 
 // static file
-app.use(timeout('5s'))
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname +'public/css'))
 app.use('/js', express.static(__dirname +'public/js'))
