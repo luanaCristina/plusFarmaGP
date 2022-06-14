@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}))
 // conectando o banco de dados
 
 const MongoClient =require('mongodb').MongoClient
-const uri = "mongodb+srv://dbUser:dbUser@cluster0.rcapfpn.mongodb.net/?retryWrites=true&w=majority"
+const uri = `${process.env.DATABASE_URL}`
 
 MongoClient.connect(uri,(err, client) =>{
     if(err) return console.log(err)
