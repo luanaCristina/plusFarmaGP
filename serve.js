@@ -14,16 +14,11 @@ const uri = "mongodb+srv://dbUser:dbUser@cluster0.rcapfpn.mongodb.net/?retryWrit
 MongoClient.connect(uri,(err, client) =>{
     if(err) return console.log(err)
     db = client.db('bancoPlus')
-
-  const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
-app.listen(PORT, LOCAL_ADDRESS, () => {
-  const address = app.address();
-  console.log('server listening at', address);
   
 });
-    //app.listen(3000 , () =>{
-    //    console.log("rodando safe")
-    //})
+    app.listen(8080 , () =>{
+     console.log("rodando safe")
+    })
 })
 
 
