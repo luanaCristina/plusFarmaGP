@@ -5,11 +5,6 @@ const app = express()
 
 app.use(express.urlencoded({extended:true}))
 
-const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
-app.listen(PORT, LOCAL_ADDRESS, () => {
-  const address = app.address();
-  console.log('server listening at', address);
-});
 
 // conectando o banco de dados
 
@@ -20,6 +15,12 @@ MongoClient.connect(uri,(err, client) =>{
     if(err) return console.log(err)
     db = client.db('bancoPlus')
 
+  const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
+app.listen(PORT, LOCAL_ADDRESS, () => {
+  const address = app.address();
+  console.log('server listening at', address);
+  
+});
     //app.listen(3000 , () =>{
     //    console.log("rodando safe")
     //})
