@@ -20,7 +20,7 @@ const uri = `${process.env.DATABASE_URL}`
 let client
 try {
     // Use connect method to connect to the Server
-    client = await MongoClient.connect(uri);
+    client = await new MongoClient.connect(uri);
 
     const db = client.db('bancoPlus');
   } catch (err) {
