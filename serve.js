@@ -2,9 +2,10 @@
 const express = require('express')
 const ObjectId = require("mongodb").ObjectId;
 const app = express()
+const port = 3001
 
 app.listen(process.env.PORT || port, () => {
-  console.log(`app está rodando na porta ${port}`)
+  console.log("app está rodando na porta" + port)
 })
 
 app.use(express.urlencoded({extended:true}))
