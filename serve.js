@@ -14,13 +14,23 @@ app.use(express.urlencoded({extended:true}))
 // conectando o banco de dados
 
 const MongoClient =require('mongodb').MongoClient
-const uri = `${process.env.DATABASE_URL}`
 
-MongoClient.connect(uri,(err, client) =>{
-    if(err) return console.log(err)
-    db = client.db('bancoPlus')
-  
-});
+(async function(){
+const uri = `${process.env.DATABASE_URL}`
+let client
+try {
+    // Use connect method to connect to the Server
+    client = await MongoClient.connect(uri);
+
+    const db = client.db('bancoPlus');
+  } catch (err) {
+    console.log(err.stack);
+  }
+
+  if (client) {
+    client.close();
+  }
+})();
     //app.listen(8080 , () =>{
      //console.log("rodando safe")
     //})
