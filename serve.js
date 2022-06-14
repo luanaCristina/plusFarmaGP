@@ -5,6 +5,8 @@ const app = express()
 
 app.use(express.urlencoded({extended:true}))
 
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 
 // conectando o banco de dados
 
@@ -15,9 +17,9 @@ MongoClient.connect(uri,(err, client) =>{
     if(err) return console.log(err)
     db = client.db('bancoPlus')
 
-    app.listen(3000 , () =>{
-        console.log("rodando safe")
-    })
+    //app.listen(3000 , () =>{
+    //    console.log("rodando safe")
+    //})
 })
 
 
